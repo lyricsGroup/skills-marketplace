@@ -1,0 +1,38 @@
+{
+  "name": "lyric-skills-marketplace",
+  "owner": {
+    "name": "Lyric",
+    "email": "[TODO: your-email@example.com]"
+  },
+  "metadata": {
+    "description": "A Claude Code plugin marketplace focused on turning requirements into markdown solution documents.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "lyric-skills",
+      "description": "Turn requirements into structured markdown solution documents.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Lyric",
+        "email": "[TODO: your-email@example.com]"
+      },
+      "source": "./plugins/lyric-skills",
+      "category": "developer-tools",
+      "tags": [
+        "requirements",
+        "planning",
+        "markdown",
+        "proposal",
+        "documentation"
+      ],
+      "keywords": [
+        "requirements",
+        "solution-design",
+        "markdown",
+        "planning",
+        "documentation"
+      ]
+    }
+  ]
+}

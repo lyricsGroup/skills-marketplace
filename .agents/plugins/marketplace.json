@@ -1,0 +1,20 @@
+{
+  "name": "lyric-skills-marketplace",
+  "interface": {
+    "displayName": "Lyric Skills Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "lyric-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/lyric-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements To MD"
+  short_description: "Turn requirements into a markdown solution plan."
+  default_prompt: "Use $requirements-to-md to turn this requirement into a structured markdown solution document."
