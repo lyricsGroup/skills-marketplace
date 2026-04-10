@@ -1,0 +1,46 @@
+{
+  "name": "skills-marketplace",
+  "version": "0.1.0",
+  "description": "A plugin that bundles six focused engineering workflow skills.",
+  "author": {
+    "name": "lyricsGroup",
+    "email": "[TODO: team-email@example.com]",
+    "url": "https://github.com/lyricsGroup"
+  },
+  "homepage": "https://github.com/lyricsGroup/skills-marketplace",
+  "repository": "https://github.com/lyricsGroup/skills-marketplace",
+  "license": "MIT",
+  "keywords": [
+    "code-analysis",
+    "solution-planning",
+    "frontend-implementation",
+    "backend-implementation",
+    "ui-testing",
+    "code-review",
+    "requirements",
+    "documentation"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Skills Marketplace",
+    "shortDescription": "Six focused skills for analysis, planning, build, test, and review.",
+    "longDescription": "A local marketplace-style plugin that splits engineering work into six focused skills: code analysis, solution planning, frontend implementation, backend implementation, UI testing, and code review.",
+    "developerName": "lyricsGroup",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Workflow"
+    ],
+    "websiteURL": "https://github.com/lyricsGroup/skills-marketplace",
+    "privacyPolicyURL": "[TODO: add-privacy-policy-url]",
+    "termsOfServiceURL": "[TODO: add-terms-url]",
+    "defaultPrompt": [
+      "Analyze this code path and tell me the conclusion with evidence.",
+      "Turn this requirement into a concrete implementation plan in markdown.",
+      "Review this patch and return severity-ranked findings with a final conclusion."
+    ],
+    "brandColor": "#1F6FEB"
+  }
+}

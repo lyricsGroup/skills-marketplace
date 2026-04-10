@@ -1,14 +1,14 @@
 {
-  "name": "lyric-skills-marketplace",
+  "name": "skills-marketplace",
   "interface": {
-    "displayName": "Lyric Skills Marketplace"
+    "displayName": "Skills Marketplace"
   },
   "plugins": [
     {
-      "name": "lyric-skills",
+      "name": "skills-marketplace",
       "source": {
         "source": "local",
-        "path": "./plugins/lyric-skills"
+        "path": "./plugins/skills-marketplace"
       },
       "policy": {
         "installation": "AVAILABLE",

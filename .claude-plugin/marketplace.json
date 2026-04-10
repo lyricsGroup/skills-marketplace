@@ -1,36 +1,42 @@
 {
-  "name": "lyric-skills-marketplace",
+  "name": "skills-marketplace",
   "owner": {
-    "name": "Lyric",
-    "email": "[TODO: your-email@example.com]"
+    "name": "lyricsGroup",
+    "email": "[TODO: team-email@example.com]"
   },
   "metadata": {
-    "description": "A Claude Code plugin marketplace focused on turning requirements into markdown solution documents.",
+    "description": "A Claude Code plugin marketplace with six focused engineering workflow skills.",
     "version": "0.1.0"
   },
   "plugins": [
     {
-      "name": "lyric-skills",
-      "description": "Turn requirements into structured markdown solution documents.",
+      "name": "skills-marketplace",
+      "description": "Six focused skills for code analysis, planning, frontend, backend, UI testing, and code review.",
       "version": "0.1.0",
       "author": {
-        "name": "Lyric",
-        "email": "[TODO: your-email@example.com]"
+        "name": "lyricsGroup",
+        "email": "[TODO: team-email@example.com]"
       },
-      "source": "./plugins/lyric-skills",
+      "source": "./plugins/skills-marketplace",
       "category": "developer-tools",
       "tags": [
+        "analysis",
+        "frontend",
+        "backend",
+        "ui-testing",
+        "code-review",
         "requirements",
         "planning",
-        "markdown",
-        "proposal",
         "documentation"
       ],
       "keywords": [
+        "code-analysis",
+        "solution-planning",
+        "frontend-implementation",
+        "backend-implementation",
+        "ui-testing",
+        "code-review",
         "requirements",
-        "solution-design",
-        "markdown",
-        "planning",
         "documentation"
       ]
     }

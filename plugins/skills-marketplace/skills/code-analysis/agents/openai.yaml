@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Analysis"
+  short_description: "Analyze code paths and return a concise technical conclusion."
+  default_prompt: "Use $code-analysis to inspect this code path and return a concise, evidence-backed conclusion."

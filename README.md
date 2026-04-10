@@ -1,6 +1,6 @@
-# Lyric Skills Marketplace
+# Skills Marketplace
 
-这个仓库现在只聚焦一件事：根据需求整理方案，并直接产出 Markdown 文档。
+这个仓库提供 6 个职责清晰的工程技能，覆盖代码分析、方案制定、前后端实现、UI 测试和代码审核。
 
 ## 导入方式
 
@@ -10,10 +10,10 @@
 
 ```bash
 # 安装整个仓库里的 skills
-npx skills add <your-github-username>/lyric-skills-marketplace --agent codex
+npx skills add lyricsGroup/skills-marketplace --agent codex
 
 # 或只安装单个 skill
-npx skills add https://github.com/<your-github-username>/lyric-skills-marketplace/tree/main/skills/requirements-to-md
+npx skills add https://github.com/lyricsGroup/skills-marketplace/tree/main/skills/code-analysis
 ```
 
 ### 方式 2：通过 Claude Code 插件市场
@@ -21,8 +21,8 @@ npx skills add https://github.com/<your-github-username>/lyric-skills-marketplac
 适合 Claude Code 的 `/plugin marketplace add` 流程。
 
 ```bash
-/plugin marketplace add https://github.com/<your-github-username>/lyric-skills-marketplace
-/plugin install lyric-skills@lyric-skills-marketplace
+/plugin marketplace add https://github.com/lyricsGroup/skills-marketplace
+/plugin install skills-marketplace@skills-marketplace
 ```
 
 要让别人正常导入，仓库需要公开，或者对方对该 GitHub 仓库有访问权限。
@@ -30,38 +30,50 @@ npx skills add https://github.com/<your-github-username>/lyric-skills-marketplac
 ## 当前结构
 
 ```text
-lyric-skills-marketplace/
+skills-marketplace/
 ├── .claude-plugin/marketplace.json
 ├── .agents/plugins/marketplace.json
-├── plugins/lyric-skills/
+├── plugins/skills-marketplace/
 │   ├── .claude-plugin/plugin.json
 │   ├── .codex-plugin/plugin.json
 │   ├── hooks/hooks.json
 │   ├── scripts/validate-skills.sh
 │   └── skills/
-│       └── requirements-to-md/
-└── skills -> plugins/lyric-skills/skills
+│       ├── code-analysis/
+│       ├── solution-planning/
+│       ├── frontend-implementation/
+│       ├── backend-implementation/
+│       ├── ui-testing/
+│       └── code-review/
+└── skills -> plugins/skills-marketplace/skills
 ```
 
-## 当前 Skill
+## Skill Map
 
-- `requirements-to-md`: 接收模糊或完整需求，补齐假设与边界，形成结构化方案，并落成 `.md` 文件
+| Skill | 用途 | 默认输出 |
+| --- | --- | --- |
+| `code-analysis` | 分析代码结构、调用链、依赖、影响面，并给出结论 | 结论、证据、影响面、风险 |
+| `solution-planning` | 根据需求制定或修改方案，并落成 Markdown | 方案文档、假设、任务拆分 |
+| `frontend-implementation` | 按确认方案完成前端实现 | 改动代码、交互状态、校验结果 |
+| `backend-implementation` | 按确认方案完成后端实现 | 改动代码、接口/数据变更、测试结果 |
+| `ui-testing` | 测试关键 UI 流程并检查视觉/交互问题 | 检查清单、问题列表、结论 |
+| `code-review` | 审核代码并给出严重度排序的结论 | findings、风险、结论 |
 
-## 默认行为
+## 给维护者看的约定
 
-- 用户没指定文件名时，优先写入仓库根目录下的 `docs/`
-- 文件名默认使用 `YYYY-MM-DD-<topic>.md`
-- 文档默认包含背景、目标、范围、约束、方案、执行计划、风险、验收标准
-- 如果关键信息不足，不停在“提问模式”，而是先列出假设和待确认项
+- 一个 skill 只负责一种任务，不做跨职责混写
+- `SKILL.md` 保持短，细节放到 `references/`
+- `description` 必须写清楚触发场景，方便 AI 自动命中
+- `references/` 里的模板或检查单要面向创作者可读，不只面向模型
+- 修改 skill 时，同步更新本 README 的 Skill Map
 
 ## 校验
 
 ```bash
-/Users/lyric/code/utils/lyric-skills-marketplace/plugins/lyric-skills/scripts/validate-skills.sh
+/Users/lyric/code/utils/skills-marketplace/plugins/skills-marketplace/scripts/validate-skills.sh
 ```
 
 ## 你后面要改的地方
 
-- 把 [plugin.json](/Users/lyric/code/utils/lyric-skills-marketplace/plugins/lyric-skills/.codex-plugin/plugin.json) 里的仓库地址和邮箱换成你自己的
-- 把 [marketplace.json](/Users/lyric/code/utils/lyric-skills-marketplace/.claude-plugin/marketplace.json) 和 Claude plugin manifest 里的邮箱也换掉
-- 如果你想输出固定格式的方案文档，可以继续改 `requirements-to-md/references/solution-template.md`
+- 如果你需要联系人邮箱，把 [plugin.json](/Users/lyric/code/utils/skills-marketplace/plugins/skills-marketplace/.codex-plugin/plugin.json) 和 [marketplace.json](/Users/lyric/code/utils/skills-marketplace/.claude-plugin/marketplace.json) 里的占位邮箱补掉
+- 如果你想改某个 skill 的输出格式，优先改对应 `references/` 模板，而不是把 `SKILL.md` 写得很长

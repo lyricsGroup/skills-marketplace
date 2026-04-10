@@ -1,0 +1,20 @@
+{
+  "name": "skills-marketplace",
+  "version": "0.1.0",
+  "description": "Six focused engineering workflow skills for analysis, planning, implementation, testing, and review.",
+  "author": {
+    "name": "lyricsGroup",
+    "email": "[TODO: team-email@example.com]"
+  },
+  "license": "MIT",
+  "keywords": [
+    "code-analysis",
+    "solution-planning",
+    "frontend-implementation",
+    "backend-implementation",
+    "ui-testing",
+    "code-review",
+    "requirements",
+    "documentation"
+  ]
+}

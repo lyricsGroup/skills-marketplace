@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Implementation"
+  short_description: "Implement frontend changes that match the confirmed plan."
+  default_prompt: "Use $frontend-implementation to implement the confirmed frontend scope and validate key states."
