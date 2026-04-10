@@ -1,4 +1,0 @@
-interface:
-  display_name: "Backend Implementation"
-  short_description: "Implement backend changes with clear contracts and checks."
-  default_prompt: "Use $backend-implementation to implement this backend scope and report the contract, data, and test impact."

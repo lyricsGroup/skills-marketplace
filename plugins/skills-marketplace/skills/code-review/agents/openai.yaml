@@ -1,4 +1,4 @@
 interface:
-  display_name: "Code Review"
+  display_name: "Review"
   short_description: "Review code and return severity-ranked findings."
   default_prompt: "Use $code-review to inspect this change set and return severity-ranked findings with a final verdict."

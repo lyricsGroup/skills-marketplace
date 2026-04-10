@@ -1,0 +1,4 @@
+interface:
+  display_name: "Senior Backend"
+  short_description: "Implement backend changes with senior-level stack judgment."
+  default_prompt: "Use $senior-backend to implement this backend scope with senior Java and Spring Boot engineering judgment."

@@ -12,10 +12,10 @@
   "license": "MIT",
   "keywords": [
     "code-analysis",
-    "solution-planning",
-    "frontend-implementation",
-    "backend-implementation",
-    "ui-testing",
+    "code-planning",
+    "senior-frontend",
+    "senior-backend",
+    "code-ui-test",
     "code-review",
     "requirements",
     "documentation"
@@ -25,7 +25,7 @@
   "interface": {
     "displayName": "Skills Marketplace",
     "shortDescription": "Six focused skills for analysis, planning, build, test, and review.",
-    "longDescription": "A local marketplace-style plugin that splits engineering work into six focused skills: code analysis, solution planning, frontend implementation, backend implementation, UI testing, and code review.",
+    "longDescription": "A local marketplace-style plugin that splits engineering work into six focused skills: analysis, planning, frontend, backend, UI testing, and review.",
     "developerName": "lyricsGroup",
     "category": "Productivity",
     "capabilities": [

@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "skills-marketplace",
-      "description": "Six focused skills for code analysis, planning, frontend, backend, UI testing, and code review.",
+      "description": "Six focused skills for analysis, planning, frontend, backend, UI testing, and review.",
       "version": "0.1.0",
       "author": {
         "name": "lyricsGroup",
@@ -31,10 +31,10 @@
       ],
       "keywords": [
         "code-analysis",
-        "solution-planning",
-        "frontend-implementation",
-        "backend-implementation",
-        "ui-testing",
+        "code-planning",
+        "senior-frontend",
+        "senior-backend",
+        "code-ui-test",
         "code-review",
         "requirements",
         "documentation"

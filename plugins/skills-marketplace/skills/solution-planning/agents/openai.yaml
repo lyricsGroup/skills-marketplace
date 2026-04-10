@@ -1,4 +1,0 @@
-interface:
-  display_name: "Solution Planning"
-  short_description: "Turn requirements into an actionable implementation plan."
-  default_prompt: "Use $solution-planning to turn this requirement into a structured markdown implementation plan."

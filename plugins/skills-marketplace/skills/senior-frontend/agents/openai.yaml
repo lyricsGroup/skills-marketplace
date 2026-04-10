@@ -1,0 +1,4 @@
+interface:
+  display_name: "Senior Frontend"
+  short_description: "Implement frontend changes with senior-level stack judgment."
+  default_prompt: "Use $senior-frontend to implement this UI scope with senior React, Vue, TypeScript, and JavaScript judgment."

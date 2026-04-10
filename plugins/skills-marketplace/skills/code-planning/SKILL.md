@@ -1,5 +1,5 @@
 ---
-name: solution-planning
+name: code-planning
 description: 根据需求制定方案、拆解任务、修改已有方案，并生成或更新 Markdown 文档。用于用户提到“出方案”“写技术方案”“改方案”“整理实施计划”“输出 md”“补充验收标准”“更新设计文档”等场景。
 ---
 
