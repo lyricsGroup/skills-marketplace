@@ -6,13 +6,10 @@
 
 ### 方式 1：通过 skills CLI
 
-适合 Codex、Claude Code 和其他支持 `skills` CLI 的环境。
+适合 Codex 和其他直接按 `SKILL.md` 安装 skill 的环境。仓库根目录 `skills/` 是唯一真实 skill 目录。
 
 ```bash
-# 安装整个仓库里的 skills
-npx skills add lyricsGroup/skills-marketplace --agent codex
-
-# 或只安装单个 skill
+# 安装单个 skill 到 Codex
 npx skills add https://github.com/lyricsGroup/skills-marketplace/tree/main/skills/code-analysis
 ```
 
@@ -25,25 +22,30 @@ npx skills add https://github.com/lyricsGroup/skills-marketplace/tree/main/skill
 /plugin install skills-marketplace@skills-marketplace
 ```
 
+## 维护方式
+
+- 根目录 `skills/` 是唯一真实源码目录
+- 仓库根目录同时承载 skill 目录和插件包装元数据
+- 修改 skill 时，直接编辑根目录 `skills/`
+- 交付前执行 `scripts/validate-skills.sh`
+
 ## 当前结构
 
 ```text
 skills-marketplace/
+├── skills/
+│   ├── code-analysis/
+│   ├── code-planning/
+│   ├── senior-frontend/
+│   ├── senior-backend/
+│   ├── code-ui-test/
+│   └── code-review/
+├── .codex-plugin/plugin.json
+├── hooks/hooks.json
+├── scripts/validate-skills.sh
 ├── .claude-plugin/marketplace.json
+├── .claude-plugin/plugin.json
 ├── .agents/plugins/marketplace.json
-├── plugins/skills-marketplace/
-│   ├── .claude-plugin/plugin.json
-│   ├── .codex-plugin/plugin.json
-│   ├── hooks/hooks.json
-│   ├── scripts/validate-skills.sh
-│   └── skills/
-│       ├── code-analysis/
-│       ├── code-planning/
-│       ├── senior-frontend/
-│       ├── senior-backend/
-│       ├── code-ui-test/
-│       └── code-review/
-└── skills -> plugins/skills-marketplace/skills
 ```
 
 ## Skill Map
@@ -63,10 +65,12 @@ skills-marketplace/
 - `SKILL.md` 保持短，细节放到 `references/`
 - `description` 必须写清楚触发场景，方便 AI 自动命中
 - 前后端 skill 要体现“资深工程师”预期，具体栈说明放在 `references/`
+- 根目录 `skills/` 是唯一真实 skill 目录
+- 不要再引入第二套 `skills/` 目录或 symlink 别名，否则会被重复扫描
 - 修改 skill 时，同步更新本 README 的 Skill Map
 
 ## 校验
 
 ```bash
-/Users/lyric/code/utils/skills-marketplace/plugins/skills-marketplace/scripts/validate-skills.sh
+/Users/lyric/code/utils/skills-marketplace/scripts/validate-skills.sh
 ```

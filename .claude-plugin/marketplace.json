@@ -17,7 +17,7 @@
         "name": "lyricsGroup",
         "email": "[TODO: team-email@example.com]"
       },
-      "source": "./plugins/skills-marketplace",
+      "source": "./",
       "category": "developer-tools",
       "tags": [
         "analysis",

@@ -8,7 +8,7 @@
       "name": "skills-marketplace",
       "source": {
         "source": "local",
-        "path": "./plugins/skills-marketplace"
+        "path": "./"
       },
       "policy": {
         "installation": "AVAILABLE",
