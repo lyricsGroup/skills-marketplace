@@ -1,4 +1,4 @@
 interface:
   display_name: "Analysis"
-  short_description: "Analyze code paths and return a concise technical conclusion."
-  default_prompt: "Use $code-analysis to inspect this code path and return a concise, evidence-backed conclusion."
+  short_description: "Analyze code paths and write an evidence-backed markdown report."
+  default_prompt: "Use $code-analysis to inspect this code path and write an evidence-backed markdown report under docs/."

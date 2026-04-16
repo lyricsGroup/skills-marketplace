@@ -52,12 +52,12 @@ skills-marketplace/
 
 | Skill | 用途 | 默认输出 |
 | --- | --- | --- |
-| `code-analysis` | 分析代码结构、调用链、依赖、影响面，并给出结论 | 结论、证据、影响面、风险 |
-| `code-planning` | 根据需求制定或修改方案，并落成 Markdown | 方案文档、假设、任务拆分 |
+| `code-analysis` | 分析代码结构、调用链、依赖、影响面，并落成 Markdown | `docs/*.md` 分析文档 |
+| `code-planning` | 根据需求制定或修改方案，并落成 Markdown | `docs/*.md` 方案文档 |
 | `senior-frontend` | 以资深前端标准完成实现 | 改动代码、交互状态、校验结果 |
 | `senior-backend` | 以资深后端标准完成实现 | 改动代码、接口/数据变更、测试结果 |
-| `code-ui-test` | 测试关键 UI 流程并检查视觉/交互问题 | 检查清单、问题列表、结论 |
-| `code-review` | 审核代码并给出严重度排序的结论 | findings、风险、结论 |
+| `code-ui-test` | 测试关键 UI 流程并检查视觉/交互问题，落成 Markdown | `docs/*.md` UI 测试文档 |
+| `code-review` | 审核代码并给出严重度排序的结论，落成 Markdown | `docs/*.md` review 文档 |
 
 ## 给维护者看的约定
 

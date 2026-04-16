@@ -1,4 +1,4 @@
 interface:
   display_name: "Planning"
-  short_description: "Turn requirements into an actionable implementation plan."
-  default_prompt: "Use $code-planning to turn this requirement into a structured markdown implementation plan."
+  short_description: "Turn requirements into an actionable markdown implementation plan."
+  default_prompt: "Use $code-planning to turn this requirement into a structured markdown implementation plan under docs/."

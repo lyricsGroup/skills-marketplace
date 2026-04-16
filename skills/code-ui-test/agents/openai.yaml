@@ -1,4 +1,4 @@
 interface:
   display_name: "UI Test"
-  short_description: "Test key UI flows and report visual or interaction issues."
-  default_prompt: "Use $code-ui-test to verify the main UI flows and report pass or fail issues with a final verdict."
+  short_description: "Test key UI flows and write a markdown UI test report."
+  default_prompt: "Use $code-ui-test to verify the main UI flows and write a markdown UI test report under docs/."
